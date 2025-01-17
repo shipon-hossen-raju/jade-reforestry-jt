@@ -19,6 +19,8 @@ module.exports = {
 
         btnBg: "#FBF9F4",
         btnText: "#022205",
+
+        txtPrimaryColor: "#4E5152",
       },
     },
   },

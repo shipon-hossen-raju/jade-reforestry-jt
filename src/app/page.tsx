@@ -1,6 +1,7 @@
 import MenuHeader from "@/components/headers/MenuHeader/MenuHeader";
 import TopHeader from "@/components/headers/TopHeader/TopHeader";
 import Banner from "./pageComponent/Banner";
+import BlogSection from "./pageComponent/BlogSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
 
       {/* pages components */}
       <Banner />
+      <BlogSection />
     </div>
   );
 }
