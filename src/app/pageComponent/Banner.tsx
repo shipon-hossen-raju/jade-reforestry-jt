@@ -23,7 +23,7 @@ export default function Banner() {
               natuur samen floreren. Met onze praktische groene oplossingen
               maken we dit werkelijkheid.
             </p>
-            <Button>Doe met ons mee</Button>
+            <Button variant="secondary">Doe met ons mee</Button>
           </div>
         </div>
       </MainContainer>
