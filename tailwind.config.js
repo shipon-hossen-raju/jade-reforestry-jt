@@ -16,6 +16,9 @@ module.exports = {
         greenPrimary: "#77892B",
         secondary: "#F0ECE3",
         danger: "#DC2626",
+
+        btnBg: "#FBF9F4",
+        btnText: "#022205",
       },
     },
   },
