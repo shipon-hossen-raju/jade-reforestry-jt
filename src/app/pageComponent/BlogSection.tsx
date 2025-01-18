@@ -1,7 +1,6 @@
 import agroforestryImg from "@/asserts/agroforestry-1.png";
 import boomvrzorgingImg from "@/asserts/boomverzorging.png";
-import arrowBottomIcon from "@/asserts/icons/arrow-down.svg";
-import arrowIcon from "@/asserts/icons/arrow-right.svg";
+import { arrowDownIcon, arrowRightIcon } from "@/asserts/icons/icons";
 import kwekerijImg from "@/asserts/kwekerij.png";
 import CustomImage from "@/components/Elements/CustomImage";
 import MainContainer from "@/components/Elements/MainContainer";
@@ -51,7 +50,7 @@ const blogData: TBlogData[] = [
 
 export default function BlogSection() {
   return (
-    <section>
+    <section id="blog-section">
       <MainContainer className="-mt-28">
         {/* title */}
         <div className="text-center mb-3.5">
@@ -62,12 +61,16 @@ export default function BlogSection() {
             Praktische groene oplossingen{" "}
           </h1>
 
-          <figure className="">
-            {" "}
+          <figure className="text-xl my-4 text-center">
+            {/* {" "}
             <CustomImage
-              className="mx-auto max-w-min text-center"
+              className="mx-auto max-w-min text-center text-[#9F9F9F]"
               src={arrowBottomIcon}
-            />{" "}
+            />{" "} */}
+
+            <span className="inline-block text-center text-[#9F9F9F]">
+              <Link href={"#blog-section"}>{arrowDownIcon}</Link>
+            </span>
           </figure>
         </div>
 
@@ -105,7 +108,7 @@ function BlogCard({ item }: { item: TBlogData }) {
         {" "}
         Meer over Agroforestry{" "}
         <span className="px-[28px] py-6">
-          <CustomImage src={arrowIcon} />
+          <span>{arrowRightIcon}</span>
         </span>
       </Link>
     </div>

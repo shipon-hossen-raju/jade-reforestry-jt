@@ -12,13 +12,13 @@ export default function WhatWeDo() {
           <h2 className="text-[22px] leading-7 text-greenPrimary">
             Wat we doen
           </h2>
-          <h1 className="text-4xl font-normal leading-[48px]">
+          <h1 className="text-2xl md:text-4xl font-normal leading-[48px]">
             Passie voor duurzame landbouw en natuur
           </h1>
         </div>
 
         {/* images content */}
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           <div>
             <CustomImage src={imageImg1} />
           </div>

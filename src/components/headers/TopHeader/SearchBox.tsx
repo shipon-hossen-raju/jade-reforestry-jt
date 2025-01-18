@@ -1,8 +1,7 @@
 "use client";
 
-import searchIcon from "@/asserts/icons/magnifying-glass-circle--circle-glass.svg";
+import { magnifyingGlassIcon } from "@/asserts/icons/icons";
 import { ChangeEvent } from "@/types/global";
-import CustomImage from "../../Elements/CustomImage";
 import Input from "../../form/Input";
 
 export default function SearchBox() {
@@ -18,13 +17,14 @@ export default function SearchBox() {
         className="rounded-s-full border-0 py-2 px-[18px]"
       />
       {/* <div className=" h-10 w-10 flex items-center justify-center"> */}
-      <CustomImage
+      {/* <CustomImage
         src={searchIcon}
         alt="Icon"
         width={40}
         height={40}
         className="bg-primary rounded-full p-1"
-      />
+      /> */}
+      <span>{magnifyingGlassIcon}</span>
       {/* </div> */}
     </div>
   );

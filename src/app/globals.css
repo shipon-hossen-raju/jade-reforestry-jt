@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+section,
+div,
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-behavior: smooth;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}

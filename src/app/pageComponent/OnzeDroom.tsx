@@ -1,9 +1,9 @@
 import MainContainer from "@/components/Elements/MainContainer";
 import React from "react";
 import bgImage from "@/asserts/onze-droom-bg.png";
-import tikTikIcon from "@/asserts/icons/thik-thik.svg";
 import CustomImage from "@/components/Elements/CustomImage";
 import onzeDroom from "@/asserts/onze-droom-image.png";
+import { TikTikIcon } from "@/asserts/icons/icons";
 
 const onzeData = [
   "Slimme groene landbouw",
@@ -20,7 +20,7 @@ export default function OnzeDroom() {
       className="bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
-      <MainContainer className="grid grid-cols-2 gap-5 pb-[70px] pt-[88px] items-center">
+      <MainContainer className="grid md:grid-cols-2 gap-5 pb-[70px] pt-[88px] items-center">
         <div className="">
           <h1 className="text-4xl leading-[48px] mb-1.5 font-normal">
             Onze droom
@@ -39,7 +39,7 @@ export default function OnzeDroom() {
             {onzeData.map((item, key) => (
               <div key={`tik-${key}`} className="flex items-center gap-5">
                 <figure className="w-5 h-3">
-                  <CustomImage src={tikTikIcon} />
+                  <span>{TikTikIcon}</span>
                 </figure>
                 <p className="text-lg leading-6 font-normal"> {item} </p>
               </div>
@@ -47,7 +47,7 @@ export default function OnzeDroom() {
           </div>
         </div>
 
-        <div>
+        <div className="order-1">
           <CustomImage src={onzeDroom} />
         </div>
       </MainContainer>

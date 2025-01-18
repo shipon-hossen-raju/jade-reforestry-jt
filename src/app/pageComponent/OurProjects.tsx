@@ -1,4 +1,4 @@
-import tikTikIcon from "@/asserts/icons/thik-thik.svg";
+import { TikTikIcon } from "@/asserts/icons/icons";
 import projectImg1 from "@/asserts/project-image-1.png";
 import Button from "@/components/Elements/Button";
 import CustomImage from "@/components/Elements/CustomImage";
@@ -65,7 +65,7 @@ export default function OurProjects() {
             Samen werken aan een groenere wereld: bekijk onze projecten
           </h1>
 
-          <div className="flex items-start justify-between gap-5">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-5">
             <p className="text-lg font-normal leading-6">
               Bossen zijn een van de meest effectieve oplossingen om de effecten
               van klimaatverandering aan te pakken. Ze zijn ook een krachtige
@@ -104,15 +104,17 @@ function ProjectCard({ item }: { item: TProjectData }) {
         <CustomImage src={item?.image} className="rounded-t-[10px] w-full" />
       </figure>
       <div className="py-8 px-2.5 rounded-[10px] border-b-2 border-greenPrimary">
-        <h4>{item.subTitle}</h4>
-        <h1> {item.title} </h1>
-        <p> {item.description} </p>
-        <hr />
+        <h4 className="text-sm font-normal leading-[19px] text-greenPrimary">
+          {item.subTitle}
+        </h4>
+        <h1 className="text-2xl font-normal leading-[32px]"> {item.title} </h1>
+        <p className="text-base leading-[22px]"> {item.description} </p>
+        <hr className="my-3" />
         <div className="space-y-4">
           {item.feature.map((item, key) => (
             <div key={`tik-${key}`} className="flex items-center gap-5">
               <figure className="w-5 h-3">
-                <CustomImage src={tikTikIcon} />
+                <span>{TikTikIcon}</span>
               </figure>
               <p className="text-lg leading-6 font-normal"> {item} </p>
             </div>

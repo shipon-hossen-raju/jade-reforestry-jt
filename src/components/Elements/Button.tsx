@@ -1,6 +1,5 @@
+import { arrowRightIcon } from "@/asserts/icons/icons";
 import React from "react";
-import arrowIcon from "@/asserts/icons/arrow-right.svg";
-import CustomImage from "./CustomImage";
 
 type ButtonProps = {
   children: React.ReactNode; // Text or elements inside the button
@@ -38,7 +37,8 @@ const Button: React.FC<ButtonProps> = ({
     >
       <span className="px-[28px] py-[18px]"> {children} </span>
       <span className="px-[28px] py-6">
-        <CustomImage src={arrowIcon} />
+        {/* <CustomImage src={arrowIcon} /> */}
+        <span>{arrowRightIcon}</span>
       </span>
     </button>
   );

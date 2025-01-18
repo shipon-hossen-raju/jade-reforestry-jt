@@ -1,7 +1,8 @@
-import arrowDownIcon from "@/asserts/icons/arrow-down.svg";
-import singleUserIcon from "@/asserts/icons/user-circle-single--circle.svg";
-import shoppingCartIcon from "@/asserts/icons/shopping-bag-hand-bag.svg";
-import CustomImage from "@/components/Elements/CustomImage";
+import {
+  arrowDownIcon,
+  shoppingCartIcon,
+  userCircleIcon,
+} from "@/asserts/icons/icons";
 
 export default function CardMenubar() {
   return (
@@ -9,18 +10,19 @@ export default function CardMenubar() {
       {/* country names */}
       <div className="flex items-center gap-1.5">
         <p>Netherlands</p>
-        <CustomImage src={arrowDownIcon} width={10} height={15} />
+
+        <span>{arrowDownIcon}</span>
       </div>
 
       {/* user logo */}
       <div className="flex items-center gap-1.5">
-        <CustomImage src={singleUserIcon} width={17} height={17} />
+        <span>{userCircleIcon}</span>
         <p>Inloggen</p>
       </div>
 
       {/* cart */}
       <div className="">
-        <CustomImage src={shoppingCartIcon} width={24} height={24} />
+        <span> {shoppingCartIcon} </span>
       </div>
     </div>
   );
