@@ -1,4 +1,4 @@
-// components/Image.tsx
+"use client";
 
 import Image, { StaticImageData } from "next/image";
 import React from "react";

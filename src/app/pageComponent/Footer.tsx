@@ -126,8 +126,8 @@ export default function Footer() {
         <div>
           <p className="text-center py-6 text-base font-normal">
             {" "}
-            &copy; Jade Reforestry | 2024 | jadereforestry.nl | Web Design by
-            Online Marketing Bakery{" "}
+            © Jade Reforestry | 2024 | jadereforestry.nl | Web Design by Online
+            Marketing Bakery{" "}
           </p>
         </div>
       </MainContainer>
