@@ -41,8 +41,8 @@ export default function CustomerStories() {
     <section data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <MainContainer className="pb-[72px] pt-[70px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-center">
-          {storiesData.map((item) => (
-            <StoriesCard key={`stories-${item.id}`} item={item} />
+          {storiesData.map((item, num) => (
+            <StoriesCard num key={`stories-${item.id}`} item={item} />
           ))}
         </div>
       </MainContainer>
@@ -50,9 +50,9 @@ export default function CustomerStories() {
   );
 }
 
-function StoriesCard({ item }: { item: TStoriesData }) {
+function StoriesCard({ item, num }: { item: TStoriesData; num: number }) {
   return (
-    <div className="relative">
+    <div data-aos="zoom-in" data-aos-delay={num * 200} className="relative">
       <CustomImage src={item.image} className="w-full" />
       <div className="text-white absolute left-5 bottom-6 w-[96%] p-2 border-l-2 border-greenPrimary">
         <h3 className="text-2xl leading-[32px] font-normal mb-1">

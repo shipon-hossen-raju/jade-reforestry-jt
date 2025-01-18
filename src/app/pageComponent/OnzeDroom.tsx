@@ -24,10 +24,16 @@ export default function OnzeDroom() {
     >
       <MainContainer className="grid md:grid-cols-2 gap-5 pb-[70px] pt-[88px] items-center">
         <div className="">
-          <h1 className="text-4xl leading-[48px] mb-1.5 font-normal">
+          <h1
+            data-aos="fade-down-right"
+            className="text-4xl leading-[48px] mb-1.5 font-normal"
+          >
             Onze droom
           </h1>
-          <p className="text-lg font-normal leading-[18px] mb-6">
+          <p
+            data-aos="fade-right"
+            className="text-lg font-normal leading-[18px] mb-6"
+          >
             We streven ernaar landbouw op een slimme manier te vergroenen,
             zonder in te boeten op productie. Stel je een groene dooradering
             voor die Europa doorkruist, waar natuur en landbouw harmonieus
@@ -37,7 +43,7 @@ export default function OnzeDroom() {
             verlaten.
           </p>
 
-          <div className="space-y-4">
+          <div data-aos="fade-up-left" className="space-y-4">
             {onzeData.map((item, key) => (
               <div key={`tik-${key}`} className="flex items-center gap-5">
                 <figure className="w-5 h-3">
@@ -49,7 +55,7 @@ export default function OnzeDroom() {
           </div>
         </div>
 
-        <div className="order-1">
+        <div data-aos="fade-down-left" className="order-1">
           <CustomImage src={onzeDroom} />
         </div>
       </MainContainer>

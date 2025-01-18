@@ -1,5 +1,7 @@
 import { TikTikIcon } from "@/asserts/icons/icons";
 import projectImg1 from "@/asserts/project-image-1.png";
+import projectImg2 from "@/asserts/project-image-2.png";
+import projectImg3 from "@/asserts/project-image-3.png";
 import Button from "@/components/Elements/Button";
 import CustomImage from "@/components/Elements/CustomImage";
 import MainContainer from "@/components/Elements/MainContainer";
@@ -30,7 +32,7 @@ const projectData: TProjectData[] = [
   },
   {
     id: "2",
-    image: projectImg1,
+    image: projectImg2,
     subTitle: "Groningen, Nederland",
     title: "Groen Groningen",
     description:
@@ -43,7 +45,7 @@ const projectData: TProjectData[] = [
   },
   {
     id: "3",
-    image: projectImg1,
+    image: projectImg3,
     subTitle: "Rotterdam, Nederland",
     title: "Stadsbos Rotterdam",
     description:
@@ -61,19 +63,25 @@ export default function OurProjects() {
     <section data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <MainContainer className="py-[72px]">
         <div className="mb-6">
-          <h1 className="text-4xl leading-[48px] font-normal mb-[33px] max-w-[580px]">
+          <h1
+            data-aos="fade-up-left"
+            className="text-4xl leading-[48px] font-normal mb-[33px] max-w-[580px]"
+          >
             Samen werken aan een groenere wereld: bekijk onze projecten
           </h1>
 
           <div className="flex flex-col md:flex-row items-start justify-between gap-5">
-            <p className="text-lg font-normal leading-6">
+            <p data-aos="fade-left" className="text-lg font-normal leading-6">
               Bossen zijn een van de meest effectieve oplossingen om de effecten
               van klimaatverandering aan te pakken. Ze zijn ook een krachtige
               kracht om mensen uit de armoede te halen, biodiversiteit te
               behouden en verwoestijning terug te dringen.
             </p>
 
-            <p className="text-lg font-normal leading-6 p-6 bg-[#F0ECE3] border-l-4 border-greenPrimary">
+            <p
+              data-aos="fade-right"
+              className="text-lg font-normal leading-6 p-6 bg-[#F0ECE3] border-l-4 border-greenPrimary"
+            >
               In plaats van alleen meer bomen te planten, werken we aan het
               herstellen van landschappen en het beschermen ervan tegen
               ontbossing op de lange termijn.
@@ -88,7 +96,7 @@ export default function OurProjects() {
             ))}
           </div>
 
-          <div className="text-center">
+          <div data-aos="zoom-in-down" className="text-center">
             <Button className="mx-auto"> Dekijk onze projeeten</Button>
           </div>
         </div>
@@ -99,7 +107,11 @@ export default function OurProjects() {
 
 function ProjectCard({ item }: { item: TProjectData }) {
   return (
-    <div className="" style={{ boxShadow: "0px 4px 28px -4px #0000001F" }}>
+    <div
+      data-aos="zoom-in-down"
+      className=""
+      style={{ boxShadow: "0px 4px 28px -4px #0000001F" }}
+    >
       <figure>
         <CustomImage src={item?.image} className="rounded-t-[10px] w-full" />
       </figure>

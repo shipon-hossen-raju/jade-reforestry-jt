@@ -28,8 +28,11 @@ export default function MenuHeader() {
       <MainContainer className="relative z-50">
         <div className="min-h-[68px] flex items-center justify-between gap-4">
           {/* Logo */}
-          <div className="max-w-[253px]">
-            <CustomImage src={logoImage} className="w-full h-auto" />
+          <div className="">
+            <CustomImage
+              src={logoImage}
+              className="w-56 md:w-[220px] lg:w-[280px] absolute bottom-0 left-0"
+            />
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -49,7 +52,7 @@ export default function MenuHeader() {
           <nav
             className={`${
               isMenuOpen
-                ? "z-10 visible opacity-100 h-auto mt-10 scale-100"
+                ? "z-10 visible opacity-100 h-auto mt-0 scale-100"
                 : "invisible opacity-0 h-0 scale-0"
             } z-10 lg:visible lg:opacity-100 lg:h-auto lg:scale-100 flex flex-col lg:flex md:flex-row items-center justify-end gap-4 absolute lg:static top-[68px] left-0 w-full bg-darkGreen lg:bg-transparent transition-all duration-300 py-4`}
           >

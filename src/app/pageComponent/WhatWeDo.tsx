@@ -13,22 +13,31 @@ export default function WhatWeDo() {
     >
       <MainContainer className="space-y-7">
         <div className="max-w-[395px] space-y-2.5">
-          <h2 className="text-[22px] leading-7 text-greenPrimary">
+          <h2
+            data-aos="fade-down"
+            className="text-[22px] leading-7 text-greenPrimary"
+          >
             Wat we doen
           </h2>
-          <h1 className="text-2xl md:text-4xl font-normal leading-[48px]">
+          <h1
+            data-aos="fade-right"
+            className="text-2xl md:text-4xl font-normal leading-[48px]"
+          >
             Passie voor duurzame landbouw en natuur
           </h1>
         </div>
 
         {/* images content */}
         <div className="grid md:grid-cols-2 gap-5">
-          <div>
+          <div data-aos="fade-up-right">
             <CustomImage src={imageImg1} />
           </div>
 
           <div>
-            <p className="text-lg font-normal leading-6 mb-7">
+            <p
+              data-aos="fade-right"
+              className="text-lg font-normal leading-6 mb-7"
+            >
               Met meer dan 15 jaar ervaring in de sector hebben we bij Jade
               Reforestry een hands-on aanpak ontwikkeld voor duurzame landbouw
               en natuurbeheer. We begrijpen de ecologische uitdagingen en bieden
@@ -39,11 +48,13 @@ export default function WhatWeDo() {
               opbrengsten.
             </p>
 
-            <Button variant="primary" className="mb-5">
-              Meer over ons
-            </Button>
+            <div data-aos="fade-right">
+              <Button variant="primary" className="mb-5">
+                Meer over ons
+              </Button>
+            </div>
 
-            <CustomImage src={imageImg2} />
+            <CustomImage data-aos="fade-right" src={imageImg2} />
           </div>
         </div>
       </MainContainer>

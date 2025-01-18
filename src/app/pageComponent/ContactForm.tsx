@@ -51,23 +51,33 @@ export default function ContactForm() {
       <MainContainer className="pb-[70px] pt-[88px]">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
           <div>
-            <h1 className="text-4xl leading-[48px] font-normal mb-1.5">
+            <h1
+              data-aos="fade-down"
+              className="text-4xl leading-[48px] font-normal mb-1.5"
+            >
               Samen maked we het verschil
             </h1>
-            <p className="text-lg leading-6 font-normal mb-10">
+            <p
+              data-aos="fade-left"
+              className="text-lg leading-6 font-normal mb-10"
+            >
               Wij geloven dat elke stap richting een groenere toekomst telt.
               Neem contact met ons op om te ontdekken hoe we jou kunnen helpen
               te vergroenen en versterken. Samen maken we het verschil.
             </p>
-            <CustomImage src={contactImg} />
+            <CustomImage data-aos="zoom-in-down" src={contactImg} />
           </div>
 
-          <div className="py-6 px-5 bg-white rounded-xl">
-            <h3 className="text-[22px] font-normal leading-[30px] text-[#454C4F] mb-6">
+          <div data-aos="flip-down" className="py-6 px-5 bg-white rounded-xl">
+            <h3
+              data-aos="zoom-in"
+              className="text-[22px] font-normal leading-[30px] text-[#454C4F] mb-6"
+            >
               Natuurlijk horen we graag van je. Laten we contact opnemen.
             </h3>
 
             <form
+              data-aos="fade-down-right"
               className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-3.5"
               onSubmit={handleSubmit}
             >
