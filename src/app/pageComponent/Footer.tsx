@@ -63,7 +63,7 @@ export default function Footer() {
   return (
     <footer className="bg-greenPrimary py-6 text-white">
       <MainContainer>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 py-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 py-6">
           <div className="md:col-span-2">
             <CustomImage src={logoImg} />
             <h3 className="text-base leading-6 font-normal">

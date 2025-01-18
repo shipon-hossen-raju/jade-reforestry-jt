@@ -6,11 +6,39 @@ import Button from "@/components/Elements/Button";
 import CustomImage from "@/components/Elements/CustomImage";
 import MainContainer from "@/components/Elements/MainContainer";
 import Input from "@/components/form/Input";
-import { ChangeEvent } from "@/types/global";
+import Textarea from "@/components/form/Textarea";
+import { InputChangeEvent } from "@/types/global";
+import { useState } from "react";
+
+interface InputData {
+  voomaam: string;
+  achternaam: string;
+  eMailadres: string;
+  telefoonnummer: string;
+  onderwerp: string;
+  bericht: string;
+}
 
 export default function ContactForm() {
-  const handleOnChange = (event: ChangeEvent) => {
-    console.log("search data ", event.target.value);
+  const [inputData, setInputData] = useState<InputData>({
+    voomaam: "",
+    achternaam: "",
+    eMailadres: "",
+    telefoonnummer: "",
+    onderwerp: "",
+    bericht: "",
+  });
+  const handleOnChange = (event: InputChangeEvent) => {
+    setInputData({
+      ...inputData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+
+    console.log("form data ", inputData);
   };
 
   return (
@@ -19,7 +47,7 @@ export default function ContactForm() {
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       <MainContainer className="pb-[70px] pt-[88px]">
-        <div className="grid grid-cols-2 items-center gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
           <div>
             <h1 className="text-4xl leading-[48px] font-normal mb-1.5">
               Samen maked we het verschil
@@ -37,7 +65,10 @@ export default function ContactForm() {
               Natuurlijk horen we graag van je. Laten we contact opnemen.
             </h3>
 
-            <form className="grid grid-cols-2 gap-x-5 gap-y-3.5">
+            <form
+              className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-3.5"
+              onSubmit={handleSubmit}
+            >
               <Input onChange={handleOnChange} name="voomaam" label="Vomaam" />
               <Input
                 onChange={handleOnChange}
@@ -58,16 +89,19 @@ export default function ContactForm() {
                 onChange={handleOnChange}
                 name="onderwerp"
                 label="Onderwerp"
-                containerClassName="col-span-2"
+                containerClassName="md:col-span-2"
               />
-              <Input
+
+              <Textarea
                 onChange={handleOnChange}
                 name="bericht"
                 label="Bericht"
-                containerClassName="col-span-2"
+                containerClassName="md:col-span-2"
               />
 
-              <Button type="submit"> Verzenden </Button>
+              <div>
+                <Button type="submit"> Verzenden </Button>
+              </div>
             </form>
           </div>
         </div>

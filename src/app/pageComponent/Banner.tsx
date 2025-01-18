@@ -9,7 +9,7 @@ export default function Banner() {
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       <MainContainer>
-        <div className="grid content-center items-center grid-cols-1 md:grid-cols-2 gap-5 h-[576px] text-white font-normal">
+        <div className="grid content-center items-center grid-cols-1 md:grid-cols-2 gap-5 min-h-[576px] text-white font-normal pb-28">
           <div>
             <h1 className="text-5xl lg:text-[74px]">Jade Reforest</h1>
             <h4 className="text-2xl lg:text-[40px]">

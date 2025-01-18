@@ -1,4 +1,6 @@
 import React from "react";
 
-export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
+export type InputChangeEvent =
+  | React.ChangeEvent<HTMLInputElement>
+  | React.ChangeEvent<HTMLTextAreaElement>;
 export type ChangeEventHandler = React.ChangeEventHandler<HTMLInputElement>;

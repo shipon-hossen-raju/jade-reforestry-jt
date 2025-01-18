@@ -51,11 +51,11 @@ const blogData: TBlogData[] = [
 export default function BlogSection() {
   return (
     <section id="blog-section">
-      <MainContainer className="-mt-28">
+      <MainContainer className="-mt-36 md:-mt-44">
         {/* title */}
         <div className="text-center mb-3.5">
           <h1
-            className={`text-white font-extrabold text-[26px] ${inter.className}`}
+            className={`text-white font-extrabold text-xl md:text-[26px] ${inter.className}`}
           >
             {" "}
             Praktische groene oplossingen{" "}

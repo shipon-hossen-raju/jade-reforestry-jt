@@ -16,6 +16,18 @@ export const arrowDownIcon = (
   </svg>
 );
 
+export const arrowDownSmallIcon = (
+  <svg
+    width="9"
+    height="6"
+    viewBox="0 0 9 6"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M8 1L4.5 4.5L1 1" stroke="currentColor" />
+  </svg>
+);
+
 export const arrowRightIcon = (
   <svg
     width="5"

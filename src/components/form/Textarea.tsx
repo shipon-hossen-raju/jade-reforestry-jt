@@ -1,24 +1,19 @@
 "use client";
 
-import { ChangeEventHandler } from "@/types/global";
-import React, { InputHTMLAttributes } from "react";
+import React, { TextareaHTMLAttributes } from "react";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  type?: string;
+interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
   error?: string;
   className?: string;
   containerClassName?: string;
-  onChange: ChangeEventHandler;
 }
 
-const Input: React.FC<InputProps> = ({
-  type = "text",
+const Textarea: React.FC<TextareaProps> = ({
   label,
   error,
   className,
   containerClassName,
-  onChange,
   ...props
 }) => {
   return (
@@ -31,12 +26,10 @@ const Input: React.FC<InputProps> = ({
           {label}
         </label>
       )}
-      <input
+      <textarea
         className={`p-2.5 border rounded-lg outline-none transition duration-200 ${
           error ? "border-red-500" : "border-gray-300"
-        } text-sm w-full ${className}`}
-        type={type}
-        onChange={onChange}
+        } text-sm w-full resize-none ${className}`}
         {...props}
       />
       {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
@@ -44,4 +37,4 @@ const Input: React.FC<InputProps> = ({
   );
 };
 
-export default Input;
+export default Textarea;
