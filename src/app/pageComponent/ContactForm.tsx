@@ -43,6 +43,8 @@ export default function ContactForm() {
 
   return (
     <section
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
       className="bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >

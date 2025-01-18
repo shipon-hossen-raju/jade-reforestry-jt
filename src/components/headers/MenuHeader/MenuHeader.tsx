@@ -57,7 +57,7 @@ export default function MenuHeader() {
               <Link
                 key={item.path}
                 href={item.path}
-                className="text-white py-2 px-4 md:py-6 hover:text-green-400 transition"
+                className="text-white text-sm xl:text-base py-2 px-3 md:py-4 hover:text-green-400 transition"
                 onClick={() => setIsMenuOpen(false)} // Close menu on link click
               >
                 {item.name}

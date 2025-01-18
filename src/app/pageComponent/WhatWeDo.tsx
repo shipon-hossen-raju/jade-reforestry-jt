@@ -6,7 +6,11 @@ import MainContainer from "@/components/Elements/MainContainer";
 
 export default function WhatWeDo() {
   return (
-    <section className="py-20">
+    <section
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      className="py-20"
+    >
       <MainContainer className="space-y-7">
         <div className="max-w-[395px] space-y-2.5">
           <h2 className="text-[22px] leading-7 text-greenPrimary">

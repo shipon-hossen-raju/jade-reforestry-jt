@@ -50,7 +50,11 @@ const blogData: TBlogData[] = [
 
 export default function BlogSection() {
   return (
-    <section id="blog-section">
+    <section
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      id="blog-section"
+    >
       <MainContainer className="-mt-36 md:-mt-44">
         {/* title */}
         <div className="text-center mb-3.5">
@@ -62,13 +66,7 @@ export default function BlogSection() {
           </h1>
 
           <figure className="text-xl my-4 text-center">
-            {/* {" "}
-            <CustomImage
-              className="mx-auto max-w-min text-center text-[#9F9F9F]"
-              src={arrowBottomIcon}
-            />{" "} */}
-
-            <span className="inline-block text-center text-[#9F9F9F]">
+            <span className="animate-bounce inline-block text-center text-[#9F9F9F]">
               <Link href={"#blog-section"}>{arrowDownIcon}</Link>
             </span>
           </figure>
@@ -76,8 +74,8 @@ export default function BlogSection() {
 
         {/* blogs card */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {blogData.map((item) => (
-            <BlogCard key={item.id} item={item} />
+          {blogData.map((item, key) => (
+            <BlogCard number={key} key={item.id} item={item} />
           ))}
         </div>
       </MainContainer>
@@ -85,9 +83,11 @@ export default function BlogSection() {
   );
 }
 
-function BlogCard({ item }: { item: TBlogData }) {
+function BlogCard({ item, number }: { item: TBlogData; number: number }) {
   return (
     <div
+      data-aos-duration={400 * number}
+      data-aos="fade-right"
       className="rounded-md p-2.5 pb-9 bg-white relative"
       style={{ boxShadow: "0px 4px 28px -4px #0000001F" }}
     >

@@ -61,7 +61,11 @@ const socialsNav: TNav[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-greenPrimary py-6 text-white">
+    <footer
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      className="bg-greenPrimary py-6 text-white"
+    >
       <MainContainer>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 py-6">
           <div className="md:col-span-2">

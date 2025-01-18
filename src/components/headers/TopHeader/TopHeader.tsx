@@ -4,7 +4,7 @@ import SearchBox from "./SearchBox";
 
 export default function TopHeader() {
   return (
-    <div className="bg-secondary w-full py-8">
+    <div className="bg-secondary w-full py-6">
       <MainContainer className="flex flex-col md:flex-row items-center justify-between gap-3">
         <div></div>
 

@@ -58,7 +58,7 @@ const projectData: TProjectData[] = [
 
 export default function OurProjects() {
   return (
-    <section>
+    <section data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <MainContainer className="py-[72px]">
         <div className="mb-6">
           <h1 className="text-4xl leading-[48px] font-normal mb-[33px] max-w-[580px]">

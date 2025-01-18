@@ -38,7 +38,7 @@ const storiesData: TStoriesData[] = [
 
 export default function CustomerStories() {
   return (
-    <section>
+    <section data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <MainContainer className="pb-[72px] pt-[70px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-center">
           {storiesData.map((item) => (

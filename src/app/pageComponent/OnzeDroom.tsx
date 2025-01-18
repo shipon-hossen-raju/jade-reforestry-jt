@@ -19,6 +19,8 @@ export default function OnzeDroom() {
     <section
       className="bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage.src})` }}
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
     >
       <MainContainer className="grid md:grid-cols-2 gap-5 pb-[70px] pt-[88px] items-center">
         <div className="">
