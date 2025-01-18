@@ -71,8 +71,8 @@ export default function Footer() {
           <div className="md:col-span-2">
             <CustomImage src={logoImg} />
             <h3 className="text-base leading-6 font-normal">
-              "De beste tijd om een boom te planten was 20 jaar geleden. De op
-              één na beste tijd is nu."
+              &quot;De beste tijd om een boom te planten was 20 jaar geleden. De
+              op één na beste tijd is nu.&quot;
             </h3>
           </div>
 
@@ -125,9 +125,8 @@ export default function Footer() {
         {/* copyright */}
         <div>
           <p className="text-center py-6 text-base font-normal">
-            {" "}
-            © Jade Reforestry | 2024 | jadereforestry.nl | Web Design by Online
-            Marketing Bakery{" "}
+            &#169; Jade Reforestry | 2024 | jadereforestry.nl | Web Design by
+            Online Marketing Bakery
           </p>
         </div>
       </MainContainer>

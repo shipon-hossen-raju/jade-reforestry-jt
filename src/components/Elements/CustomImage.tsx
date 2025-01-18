@@ -20,7 +20,7 @@ interface ImageProps {
 
 const CustomImage: React.FC<ImageProps> = ({
   src,
-  alt,
+  alt = "",
   width,
   height,
   className,
@@ -40,7 +40,7 @@ const CustomImage: React.FC<ImageProps> = ({
 
   if (isSvg) {
     return (
-      <img
+      <Image
         src={srcString}
         alt={alt}
         width={width as number}

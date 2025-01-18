@@ -1,3 +1,5 @@
+"use client";
+
 import MenuHeader from "@/components/headers/MenuHeader/MenuHeader";
 import TopHeader from "@/components/headers/TopHeader/TopHeader";
 import Banner from "./pageComponent/Banner";
@@ -25,6 +27,7 @@ export default function Home() {
       <CustomerStories />
       <ContactForm />
 
+      {/* footer */}
       <Footer />
     </div>
   );

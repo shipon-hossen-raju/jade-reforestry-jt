@@ -56,7 +56,7 @@ export default function MenuHeader() {
                 : "invisible opacity-0 h-0 scale-0"
             } z-10 lg:visible lg:opacity-100 lg:h-auto lg:scale-100 flex flex-col lg:flex md:flex-row items-center justify-end gap-4 absolute lg:static top-[68px] left-0 w-full bg-darkGreen lg:bg-transparent transition-all duration-300 py-4`}
           >
-            {menuList.map((item, key) => (
+            {menuList.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
