@@ -86,7 +86,7 @@ export default function BlogSection() {
 function BlogCard({ item, number }: { item: TBlogData; number: number }) {
   return (
     <div
-      data-aos-duration={400 * number}
+      data-aos-delay={`${400 * number}`}
       data-aos="fade-right"
       className="rounded-md p-2.5 pb-9 bg-white relative"
       style={{ boxShadow: "0px 4px 28px -4px #0000001F" }}
